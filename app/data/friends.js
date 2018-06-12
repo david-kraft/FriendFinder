@@ -1,4 +1,7 @@
-[
+module.exports = friendsArr;
+module.exports = bestMatch;
+
+const friendsArr = [
     {
         "name": "Albert Einstein",
         "photo": "https://cdn.pixabay.com/photo/2016/01/17/14/23/albert-einstein-1144965_1280.jpg",
@@ -111,4 +114,30 @@
             "5"
         ]
     }
-]
+];
+
+// Array number of match with leastDifference
+bestMatch = 0
+
+// Define variable to hold the lowest difference for comparison
+leastDifference = 0
+
+// For-loop cycling through friends array
+for (let i = 0; i < friendsArr.length; i++) {
+    const currentFriend = friendsArr[i];
+    let sumOfDifferences = 0;
+
+    // For-loop cycling through current friend's scores
+    for (let j = 0; j < currentFriend.scores.length; j++) {
+        const currentScore = currentFriend.scores[j];
+        const currentUserScore = /* Insert form data  here */[j]
+        sumOfDifferences += Math.abs(currentScore - currentUserScore)
+    }
+
+    // Conditional for putting assigning the current person to bestMatch if they are the lowest
+    if (sumOfDifferences > leastDifference) {
+        leastDifference = sumOfDifferences
+        bestMatch = i
+    }
+
+} 
