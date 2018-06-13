@@ -1,6 +1,3 @@
-module.exports = friendsArr;
-module.exports = bestMatch;
-
 const friendsArr = [
     {
         "name": "Albert Einstein",
@@ -130,8 +127,8 @@ for (let i = 0; i < friendsArr.length; i++) {
     // For-loop cycling through current friend's scores
     for (let j = 0; j < currentFriend.scores.length; j++) {
         const currentScore = currentFriend.scores[j];
-        const currentUserScore = /* Insert form data  here */[j]
-        sumOfDifferences += Math.abs(currentScore - currentUserScore)
+        const currentUserScore = userData[j]
+        sumOfDifferences += Math.abs(currentScore - parseInt(currentUserScore))
     }
 
     // Conditional for putting assigning the current person to bestMatch if they are the lowest
@@ -141,3 +138,6 @@ for (let i = 0; i < friendsArr.length; i++) {
     }
 
 } 
+
+module.exports = friendsArr;
+module.exports = bestMatch;

@@ -5,7 +5,7 @@
 
 // DECLARE DEPENDENCIES
 
-const friendsData = require("../data/friends.js");
+const friendsData = require("../data/friends");
 
 // ROUTING
 
